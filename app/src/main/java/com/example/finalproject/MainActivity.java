@@ -129,14 +129,6 @@ public class MainActivity extends AppCompatActivity {
             holder.tvDepartureAirportID.setText("Departure Airport: " + item.get("DepartureAirportID"));
             holder.tvArrivalAirportID.setText("Arrival Airport: " + item.get("ArrivalAirportID"));
 
-            holder.itemView.setOnClickListener(v -> {
-                Intent intent = new Intent(v.getContext(), more_info.class);
-                intent.putExtra("FlightDate", item.get("FlightDate"));
-                intent.putExtra("FlightNumber", item.get("FlightNumber"));
-                intent.putExtra("DepartureAirportID", item.get("DepartureAirportID"));
-                intent.putExtra("ArrivalAirportID", item.get("ArrivalAirportID"));
-                v.getContext().startActivity(intent);
-            });
         }
 
         @Override
